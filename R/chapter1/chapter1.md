@@ -1,7 +1,5 @@
 # Resolution numerique des equations non lineaires
 
-## Objectif
-
 ![objectif](/screenshots/2024-12-23-20-35-14.png)
 
 ## Directory structure
@@ -21,4 +19,7 @@ Each file in the following tree represents one algorithm:
 
 ---
 
-End.
+- Additional reading you might need to understand the codebase:
+
+1. [Functions in R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Writing-your-own-functions)
+2.
