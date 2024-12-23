@@ -33,16 +33,3 @@ This script loads the algorithms and demonstrates a "Hello World" program.
 
     * Navigate to the R/ directory to find the scripts.
     * Modify or run any script as needed.
-2. Run the main.R script to get started:
-
-```bash
-Rscript main.R
-```
-
-This script loads the algorithms and demonstrates a "Hello World" program.
-
-3. Explore the algorithms:
-
-    * Navigate to the R/ directory to find the scripts.
-    * Modify or run any script as needed.
-
