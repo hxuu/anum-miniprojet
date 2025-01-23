@@ -1,5 +1,10 @@
 # Anum-Miniprojet
 
+> [!NOTE]
+> Project Members:
+>   - MOKHTARI Anas Nedjmeddine
+>   - DJENADI Mohamed El Amine
+
 Welcome to **Anum-Miniprojet**, a simple project for implementing numerical analysis algorithms in R. This project is structured to organize algorithms by chapters, each containing its relevant scripts and documentation.
 
 ## Getting Started
