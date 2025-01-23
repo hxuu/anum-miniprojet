@@ -22,4 +22,3 @@ Each file in the following tree represents one algorithm:
 - Additional reading you might need to understand the codebase:
 
 1. [Functions in R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Writing-your-own-functions)
-2.

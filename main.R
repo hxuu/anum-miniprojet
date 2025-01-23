@@ -15,10 +15,10 @@ for (dir in dirs) {
 
 # "Hello World" Program
 cat("\nHello, Numerical Analysis World!\n")
-cat("Your project is set up and ready to explore.\n")
+cat("Your project is set up and ready to explore.\n\n")
 
 # ######################################################
-# NEW CODE: Testing the Interpolation Methods (Lagrange, Divided Differences, Finite Differences)
+# NEW CODE: Reference Weather at Hour 16
 # ######################################################
 
 # Read data from CSV file
@@ -39,44 +39,38 @@ data$Second <- format(data$Formatted, "%S")
 selected_date <- "2006-04-01"
 filtered_data <- data[data$Year == "2006" & data$Month == "04" & data$Day == "01", ]
 
-# Assuming the filtered data is stored in a variable named `filtered_data`
+# Check if data for hour 16 exists
+reference_weather <- filtered_data[filtered_data$Hour == "16", ]
 
-# print(head(filtered_data$Hour))
+# Display the reference weather data
+if (nrow(reference_weather) > 0) {
+  cat("[+] Reference weather at hour 16 (", selected_date, "): ")
+  cat(reference_weather$Temperature, "degrees.\n\n")
+} else {
+  cat("[!] No reference weather data available for hour 16 on", selected_date, "\n")
+}
+
 # Remove the row where Hour is 16 and Temperature is 16
-# print(filtered_data)
-# quit()
 filtered_data <- filtered_data[!(filtered_data$Hour == 16), ]
-# print(filtered_data$Hour)
-# print(filtered_data$Temperature)
 
 # Extract t_values and T_values
 t_values <- as.numeric(filtered_data$Hour)
 T_values <- as.numeric(filtered_data$Temperature)
-
-# Print the extracted t_values and T_values for verification
-print(t_values)
-print("==================================")
-print(T_values)
-
-quit()
-# Now, you can apply any function for estimation, if needed
-
-# quit()
 
 # Query time for which we want to predict the temperature
 t_query <- 16
 
 # Apply Lagrange Interpolation
 lagrange_result <- lagrange_interpolation(t_values, T_values, t_query)
-cat("Lagrange Interpolation result:", lagrange_result, "\n")
+cat("[+] Lagrange Interpolation result:", lagrange_result, "\n\n")
 
 # Apply Divided Differences Interpolation
 divided_result <- divided_differences(t_values, T_values, t_query)
-cat("Divided Differences result:", divided_result, "\n")
+cat("[+] Divided Differences result:", divided_result, "\n\n")
 
-# Apply Finite Differences Interpolation
-finite_result <- finite_differences(t_values, T_values, t_query)
-cat("Finite Differences result:", finite_result, "\n")
+# Apply Finite Differences Interpolation (only when they're equi-distant)
+# finite_result <- finite_differences(t_values, T_values, t_query)
+# cat("[+] Finite Differences result:", finite_result, "\n\n")
 
 # ######################################################
 # END OF NEW CODE
