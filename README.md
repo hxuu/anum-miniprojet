@@ -32,7 +32,9 @@ cd anum-miniprojet
 Rscript main.R
 ```
 
-This script loads the algorithms and demonstrates a "Hello World" program.
+> [!TIP]
+> Finite differences algorithm should be ran from the finite_diff.R file because
+the example in main.R is NOT equi-distant.
 
 3. Explore the algorithms:
 

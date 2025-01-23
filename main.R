@@ -68,11 +68,7 @@ cat("[+] Lagrange Interpolation result:", lagrange_result, "\n\n")
 divided_result <- divided_differences(t_values, T_values, t_query)
 cat("[+] Divided Differences result:", divided_result, "\n\n")
 
-# Apply Finite Differences Interpolation (only when they're equi-distant)
-# finite_result <- finite_differences(t_values, T_values, t_query)
-# cat("[+] Finite Differences result:", finite_result, "\n\n")
-
-# ######################################################
+ ######################################################
 # END OF NEW CODE
 # ######################################################
 

@@ -30,3 +30,25 @@ finite_differences <- function(x, y, x_query) {
   return(result)
 }
 
+
+if (sys.nframe() == 0) {
+        # Apply Finite Differences Interpolation (only when they're equi-distant)
+    t_values <- c(0, 2, 4, 6)
+    T_values <- c(15, 20, 30, 35)
+
+    t_query <- 3
+
+    finite_result <- finite_differences(t_values, T_values, t_query)
+
+    # Pretty print the reference weather
+    cat("\n========================================\n")
+    cat("      Reference Weather Information\n")
+    cat("========================================\n")
+    cat(sprintf("  Hour Queried          : %d\n", t_query))
+    cat(sprintf("  Reference Temperature : %.2f°C\n", finite_result))
+    cat("========================================\n\n")
+
+    finite_result <- finite_differences(t_values, T_values, t_query)
+    cat("[+] Finite Differences result:", finite_result, "°C\n")
+}
+
